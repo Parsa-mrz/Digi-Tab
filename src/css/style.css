@@ -115,3 +115,18 @@ h3.card-title.canceled-title {
 .tabcontent {
   display: none;
 }
+.my-orders {
+  font-family: iranyekan;
+  border: 1px solid #e0e0e6;
+  border-radius: 10px;
+}
+.my-orders h2{
+  padding: 14px;
+  font-size: 23px;
+}
+.my-orders-tabs {
+  padding: 15px;
+}
+.tab {
+  border-bottom: 1px solid #e0e0e6;
+}
