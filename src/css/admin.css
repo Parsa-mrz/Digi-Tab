@@ -1,0 +1,7 @@
+.order-list-table, .order-list-table th, .order-list-table td {
+    border: 1px solid;
+    margin:auto;
+    text-align:center;
+    width:450px;
+    height: 50px;
+  }

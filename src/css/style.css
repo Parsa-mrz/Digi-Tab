@@ -1,0 +1,117 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  src: url("../fonts/Yekan\ Bakh.eot");
+  src: url("../fonts/Yekan\ Bakh.otf") format("embedded-opentype"),
+    url("../fonts/Yekan\ Bakh.woff") format("woff"),
+    url("../fonts/") format("woff2"),
+    url("../fonts/Yekan\ Bakh.ttf") format("truetype");
+}
+.custom-font {
+  font-family: iranyekan;
+}
+.order-image {
+  max-width: 120px;
+  display: flex;
+}
+.order-image img {
+  margin-right: 10px;
+}
+.refund-title i {
+  color: #d3890d;
+}
+.show-factor a {
+  color: #19bfd3 !important;
+}
+.show-factor i {
+  margin-left: 6px;
+}
+h3.card-title.complete-title,
+h3.card-title.refund-title,
+h3.processing-title,
+h3.card-title.canceled-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.processing-title i {
+  color: #5dabed;
+}
+.canceled-title i {
+  color: #d30d0d;
+}
+.complete-title i {
+  color: #6bb927;
+}
+.fl-r {
+  float: right !important;
+  margin: 0;
+}
+.card-img-custom {
+  max-width: 100px;
+  border-radius: 5px;
+}
+.main-card-container-custom {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.card-container-custom {
+  margin: 10px 0;
+  padding: 5px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.mr-custom {
+  margin-right: 10px;
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.mr-custom a {
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.badge-custom {
+  font-size: 12px;
+  border-radius: 10p;
+}
+.badge-custom-color {
+  background-color: #0009bd !important;
+}
+
+.nav a {
+  color: #383838 !important;
+}
+
+.details-container-custom {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+@media (max-width: 767.98px) {
+  .details-container-custom {
+    flex-direction: column;
+  }
+}
+.empty h1 {
+  text-align: center;
+  font-size: 20px;
+}
+.empty {
+  text-align: center;
+}
+
+/* tabs  */
+.tabcontent {
+  display: none;
+}
