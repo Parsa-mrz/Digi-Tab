@@ -1,3 +1,0 @@
-<h1>
-    ORDERS TEMPLATES
-</h1>
