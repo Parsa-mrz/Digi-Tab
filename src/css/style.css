@@ -130,3 +130,8 @@ h3.card-title.canceled-title {
 .tab {
   border-bottom: 1px solid #e0e0e6;
 }
+
+.main-body-container{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
