@@ -39,6 +39,8 @@ foreach ($order_items as $item) {
     $product_title = $product->get_title();
     // product image 
     $product_image = $product->get_image();
+    echo " عکس محصول : " . $product_image;
+    echo "عنوان محصول : " . $product_title;
     // product url 
     $slug = $product->get_slug();
     $product_url = home_url() . '/products/' . $slug;
@@ -51,10 +53,10 @@ foreach ($order_items as $item) {
         $download_name = $download['name'];
         // Get the download limit (-1 indicates no limit)
         $download_limit = $download['download_limit'];
-    
+
         // Get the download expiration (-1 indicates no expiration)
         $download_expiry = $download['download_expiry'];
-    
+
         // Output the download information
         echo "Download URL: " . $download_url;
         echo "<br>";
@@ -66,3 +68,29 @@ foreach ($order_items as $item) {
         echo "<br>";
     }
 }
+echo "<br>";
+echo "تخفیف :" . $discountTotal;
+echo '<br>';
+echo "شماره سفارش :" . $order_id;
+echo '<br>';
+echo " هزینه حمل و نقل :" . $shippingTotal;
+echo '<br>';
+echo " مبلغ سفارش :" . $total;
+echo '<br>';
+echo "  تحویل گیرنده : " . $firstName . ' ' . $lastName;
+echo '<br>';
+echo "آدرس : " . $address;
+echo "<br>";
+echo "کد پستی : " . $postcode;
+echo "<br>";
+echo " شماره تماس : " . $phone;
+echo "<br>";
+echo "  روش پرداخت : " . $payment;
+echo "<br>";
+echo "تاریخ ثبت سفارش : " . $order_date;
+echo "<br>";
+echo "تاریخ  پرداخت : " . $payment_date;
+echo "<br>";
+echo "  مبلغ پرداخت شده : " . $paymentTotal;
+echo "<br>";
+echo "تعداد ایتم های سفارش" . $product_count;
