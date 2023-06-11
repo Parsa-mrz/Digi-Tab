@@ -19,3 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Display the first tab by default
   document.getElementById("Tab1").style.display = "block";
 });
+jQuery(document).ready(function ($) {
+  $('#show-payment-info').click(function () {
+    $('#payment-info').slideToggle();
+  })
+})

@@ -133,15 +133,11 @@ h3.card-title.canceled-title {
 .tab {
   border-bottom: 1px solid #e0e0e6;
 }
-
-
 .main-body-container{
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
 }
-
-
 .card-details-container{
   border:1px solid #ccc;
   margin-right:0;
@@ -150,20 +146,23 @@ h3.card-title.canceled-title {
 .card-details-container p{
   font-size: 12px!important;
 }
-
 .card-order-details{
   margin-right: 10px;
 }
-
 hr{
   background-color: #ccc;
 }
-
 .more-custom{
   color:#3d47ff;
   cursor: pointer;
 }
 
 .sell-details{
+  display: none;
+}
+.fontLoad{
+  font-family: iranyekan;
+}
+#payment-info{
   display: none;
 }
