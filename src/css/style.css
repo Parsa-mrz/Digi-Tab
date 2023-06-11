@@ -47,7 +47,7 @@ h3.card-title.canceled-title {
   margin: 0;
 }
 .card-img-custom {
-  max-width: 100px;
+  max-width: 125px!important;
   border-radius: 5px;
 }
 .main-card-container-custom {
@@ -61,7 +61,7 @@ h3.card-title.canceled-title {
   padding: 5px 10px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row!important;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -102,6 +102,9 @@ h3.card-title.canceled-title {
   .details-container-custom {
     flex-direction: column;
   }
+  .card-order-details{
+    margin-right: 0px;
+  }
 }
 .empty h1 {
   text-align: center;
@@ -135,5 +138,32 @@ h3.card-title.canceled-title {
 .main-body-container{
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
+}
 
+
+.card-details-container{
+  border:1px solid #ccc;
+  margin-right:0;
+  border-radius:5px;
+}
+.card-details-container p{
+  font-size: 12px!important;
+}
+
+.card-order-details{
+  margin-right: 10px;
+}
+
+hr{
+  background-color: #ccc;
+}
+
+.more-custom{
+  color:#3d47ff;
+  cursor: pointer;
+}
+
+.sell-details{
+  display: none;
 }
