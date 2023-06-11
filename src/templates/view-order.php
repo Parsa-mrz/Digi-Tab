@@ -58,8 +58,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
       </div>
       <hr>
       <div class="details-container-custom" style="justify-content:flex-start;">
-        <!-- <img src="./airpod.jpg" class="card-img-right card-img-custom" alt="Loading..."> -->
-        <?= $product_image ?>
+        <a href='<?= $product_url ?>'> <?= $product_image ?></a>
         <div class="card-order-details">
           <span><?= $product_title ?></span>
         </div>
