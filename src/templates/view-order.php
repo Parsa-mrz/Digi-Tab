@@ -2,6 +2,13 @@
 require_once(ORD_LI_DIR . "App/Order/View-orders.php");
 ?>
 <div class="card-body mr-custom main-body-container fontLoad">
+  <div class="details-container-custom" style="justify-content: flex-start;">
+    <a href="#" style="display: contents;">
+      <i class="fa fa-mail-forward" style="margin-top: 4px;"></i>
+      <p class="card-title title-details">جزيیات سفارش</p>
+    </a>
+  </div>
+  <hr>
   <div class="details-container-custom" style="width: 500px;">
     <p class="card-title"> کد پیگیری سفارش : <?= $order_id ?></p>
     <p class="card-title"> تاریخ ثبت سفارش : <?= $order_date ?></p>
@@ -32,6 +39,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
     <p class="card-title"> <?= $payment_date ?> </p>
   </div>
   <hr>
+
   <?php
   foreach ($order_items as $item) {
     // list of product in order 
@@ -47,7 +55,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
     $product_url = home_url() . '/products/' . $slug;
   ?>
     <div class="card-body mr-custom card-details-container">
-      <div class="details-container-custom">
+      <!-- <div class="details-container-custom">
         <p class="card-title"> مرسوله ۱ از ۱</p>
         <p class="card-title" style="color:red;"> ارسال عادی <i class="fa fa-truck"></i></p>
       </div>
@@ -55,8 +63,8 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
       </div>
       <div class="details-container-custom">
         <p class="card-title"> مبلغ مرسوله : <?= $product_price ?></p>
-      </div>
-      <hr>
+      </div> -->
+      <!-- <hr> -->
       <div class="details-container-custom" style="justify-content:flex-start;">
         <a href='<?= $product_url ?>'> <?= $product_image ?></a>
         <div class="card-order-details">
