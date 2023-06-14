@@ -25,7 +25,7 @@ class Failed{
     public function get_failed_order()
     {
         $failed_orders = wc_get_orders(array(
-            'status' => array('cancelled'),
+            'status' => array('failed'),
             'numberposts' => -1,
             'customer_id' => get_current_user_id(),
         ));

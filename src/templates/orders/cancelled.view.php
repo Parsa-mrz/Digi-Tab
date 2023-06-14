@@ -1,5 +1,5 @@
 <?php
-foreach ($failed_orders as $order) {
+foreach ($cancelled_orders as $order) {
     $order_number = $order->get_order_number();
     $order_date = $order->get_date_created();
     $order_total = wc_price($order->get_total());
@@ -37,11 +37,11 @@ foreach ($failed_orders as $order) {
     </div>
 <?php
 }
-if (!$failed_orders) { ?>
+if (!$cancelled_orders) { ?>
     <div class="card card-container-custom custom-font empty">
         <div class="card-body mr-custom">
             <img src ='<?= ORD_LI_URL . 'src/icons/order-empty.svg' ?>'>
-            <h1>شما سفارش  ناموفق ندارید</h1>
+            <h1>شما سفارش  لفو شده ندارید</h1>
         </div>
     </div>
 <?php
