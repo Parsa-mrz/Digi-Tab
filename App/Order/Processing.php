@@ -8,6 +8,7 @@ class processing
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('processing-tab',1);
     }
 
     public function loadView()

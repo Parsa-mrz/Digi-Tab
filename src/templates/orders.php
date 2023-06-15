@@ -7,18 +7,26 @@
  */
 defined('ABSPATH') || exit;
 
+$processing = get_option('processing-tab');
+$completed = get_option('completed-tab');
+$cancelled = get_option('cancelled-tab');
+$failed = get_option('failed-tab');
+$onhold = get_option('onhold-tab');
+$pending = get_option('pending-tab');
+$refunded = get_option('refunded-tab');
+
 do_action('woocommerce_before_account_orders', $has_orders); // Action hook before displaying orders
 ?>
 <div class='my-orders'>
     <h2>تاریخچه سفارشات</h2>
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Tab1')"> جاری</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab2')"> تکمیل شده</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab3')">مرجوع شده</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab4')">ناموفق</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab5')">در انتظار پرداخت</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab6')">لغو شده</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab7')">در انتظار بررسی </button>
+        <button class="tablinks active <?php echo $processing == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab1')"> جاری <span class='count'><?= do_shortcode('[processing-count]') ?></span> </button>
+        <button class="tablinks <?php echo $completed == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab2')"> تکمیل شده <span class='count'><?= do_shortcode('[complete-count]') ?></span></button>
+        <button class="tablinks <?php echo $refunded == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab3')">مرجوع شده <span class='count'><?= do_shortcode('[refund-count]') ?></span></button>
+        <button class="tablinks <?php echo $failed == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab4')">ناموفق <span class='count'><?= do_shortcode('[failed-count]') ?></span></button>
+        <button class="tablinks <?php echo $onhold == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab5')">در انتظار پرداخت <span class='count'><?= do_shortcode('[onhold-count]') ?></span></button>
+        <button class="tablinks <?php echo $cancelled == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab6')">لغو شده <span class='count'><?= do_shortcode('[cancelled-count]') ?></span></button>
+        <button class="tablinks <?php echo $pending == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab7')">در انتظار بررسی <span class='count'><?= do_shortcode('[pending-count]') ?></span></button>
     </div>
     <div class='my-orders-tabs'>
 

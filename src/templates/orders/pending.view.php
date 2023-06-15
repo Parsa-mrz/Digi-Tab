@@ -20,7 +20,7 @@ foreach ($pending_orders as $order) {
         <div class="card-body mr-custom">
             <div style="display:flex;">
                 <span class="glyphicon glyphicon-ok-circle" style="font-size: 20px;margin-top: 20px;color: green;"></span>
-                <h3 class="card-title processing-title" style="padding-right:10px"><i class="fa fa-clock"></i> جاری</h3>
+                <h3 class="card-title processing-title" style="padding-right:10px"><i class="fa fa-credit-card"></i> در انتظار پرداخت</h3>
             </div>
             <div class="details-container-custom">
                 <p class="card-title"> تاریخ : <?= $formatted_date ?></p>

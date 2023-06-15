@@ -6,6 +6,7 @@ class OnHold{
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('onhold-tab',1);
     }
 
     public function loadView()

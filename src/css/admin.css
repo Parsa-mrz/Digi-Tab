@@ -1,7 +1,65 @@
-.order-list-table, .order-list-table th, .order-list-table td {
-    border: 1px solid;
-    margin:auto;
-    text-align:center;
-    width:450px;
-    height: 50px;
-  }
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  src: url("../fonts/Yekan\ Bakh.eot");
+  src: url("../fonts/Yekan\ Bakh.otf") format("embedded-opentype"),
+    url("../fonts/Yekan\ Bakh.woff") format("woff"),
+    url("../fonts/") format("woff2"),
+    url("../fonts/Yekan\ Bakh.ttf") format("truetype");
+}
+
+.order-list-table,
+.order-list-table th,
+.order-list-table td {
+  font-family: iranyekan;
+  border: 1px solid;
+  margin: auto;
+  text-align: center;
+  width: 450px;
+  height: 50px;
+}
+
+/* Style for the tabs */
+.custom-tabs {
+  font-family: iranyekan;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  display: flex;
+  background-color: #f1f1f1;
+}
+/* Style for the tab links */
+.custom-tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+/* Change the color of the active tab link */
+.custom-tabs button.active {
+  background-color: #ccc;
+}
+
+/* Style for the tab content */
+.tab-content {
+  font-family: iranyekan;
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tab-content h3,
+.woo-order-list h1 {
+  font-family: iranyekan;
+}
+p.allert {
+  background: #21c621;
+  padding: 12px 30px;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "iranyekan";
+  font-size: 17px;
+  font-weight: bold;
+}

@@ -6,6 +6,8 @@ class Cancelled{
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('cancelled-tab',1);
+
     }
 
     public function loadView()

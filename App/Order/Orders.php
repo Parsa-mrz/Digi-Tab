@@ -21,6 +21,14 @@ class Orders
 
     public function load_view_orders_views($located, $template_name, $args, $template_path, $default_path)
     {
+        $processing = get_option('processing-tab');
+        $completed = get_option('completed-tab');
+        $cancelled = get_option('cancelled-tab');
+        $failed = get_option('failed-tab');
+        $onhold = get_option('onhold-tab');
+        $pending = get_option('pending-tab');
+        $refunded = get_option('refunded-tab');
+        
         // Check if we're on the my-account/orders/ page
         if ($template_name === 'myaccount/view-order.php') {
 

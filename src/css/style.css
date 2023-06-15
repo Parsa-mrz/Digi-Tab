@@ -172,3 +172,39 @@ hr {
   margin: 0 5px;
   font-weight: bold;
 }
+.none{
+  display: none!important;
+}
+.tabcontent.active {
+  display: block;
+}
+button.tablinks.active {
+  color: red;
+  border: none;
+  background: transparent!important;
+  border-bottom: 4px solid red!important;
+}
+button.tablinks {
+  border: none!important;
+  margin: 0;
+  font-size: 14px;
+  color: #767790;
+  font-weight: bold;
+}
+button.tablinks:hover {
+  background: transparent;
+  border-bottom: 4px solid red!important;
+  color: red;
+}
+.count {
+  background: #767790;
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: 10px;
+}
+button.tablinks:hover .count{
+  background-color: red!important;
+}
+button.tablinks.active .count{
+  background-color: red!important;
+}

@@ -8,6 +8,7 @@ class Pending
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('pending-tab',1);
     }
 
     public function loadView()

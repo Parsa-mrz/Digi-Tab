@@ -8,6 +8,7 @@ class Complete
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('completed-tab',1);
     }
 
     public function loadView()

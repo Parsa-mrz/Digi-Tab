@@ -6,6 +6,7 @@ class Failed{
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('failed-tab',1);
     }
 
     public function loadView()

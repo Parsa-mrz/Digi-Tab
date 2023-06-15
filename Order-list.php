@@ -39,6 +39,7 @@ class OrderList
         $this->add_classes();
         add_action('wp_enqueue_scripts', [$this, 'add_style']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_custom_admin_styles']);
+        add_action('admin_enqueue_scripts', [$this, 'add_admin_scripts']);
         add_action('wp_enqueue_scripts', [$this,'add_script']);
     }
 
@@ -66,6 +67,11 @@ class OrderList
     public function enqueue_custom_admin_styles()
     {
         wp_enqueue_style('custom-admin-styles', ORD_LI_URL . 'src/css/admin.css');
+    }
+
+    public function add_admin_scripts(){
+        wp_enqueue_script('WC_order_list_admin_script', ORD_LI_URL . 'src/js/admin.js', array('jquery'), '1.0', true);
+
     }
 
 }

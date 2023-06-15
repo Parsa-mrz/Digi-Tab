@@ -6,6 +6,7 @@ class Refunded{
     public function __construct()
     {
         $this->add_shortcode();
+        add_option('refunded-tab',1);
     }
 
     public function loadView()

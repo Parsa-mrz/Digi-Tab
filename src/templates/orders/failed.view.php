@@ -11,7 +11,7 @@ foreach ($failed_orders as $order) {
         <div class="card-body mr-custom">
             <div style="display:flex;">
                 <span class="glyphicon glyphicon-ok-circle" style="font-size: 20px;margin-top: 20px;color: green;"></span>
-                <h3 class="card-title canceled-title" style="padding-right:10px"><i class="fa fa-window-close"></i> لغو شده</h3>
+                <h3 class="card-title canceled-title" style="padding-right:10px"><i class="fa fa-ban"></i> ناموفق</h3>
             </div>
             <div class="details-container-custom">
                 <p class="card-title"> تاریخ : <?= $formatted_date ?></p>
