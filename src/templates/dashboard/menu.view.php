@@ -4,8 +4,7 @@
     <div class="custom-tabs">
         <button class="tab-link active" onclick="openTab(event, 'Tab1')">تنظیمات</button>
         <button class="tab-link" onclick="openTab(event, 'Tab2')">کد کوتاه</button>
-        <button class="tab-link" onclick="openTab(event, 'Tab3')">توضیحات</button>
-        <button class="tab-link" onclick="openTab(event, 'Tab4')">درباره افزونه</button>
+        <button class="tab-link" onclick="openTab(event, 'Tab3')">درباره افزونه</button>
     </div>
     <div id="Tab1" class="tab-content" style="display: block;">
         <h3>تنظیمات افزونه</h3>
@@ -102,11 +101,41 @@
                         [processing-count]
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        سفارشات در انتظار پرداخت
+                    </td>
+                    <td>
+                        [onhold-view]
+                    </td>
+                    <td>
+                        [onhold-count]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        سفارشات در انتظار بررسی
+                    </td>
+                    <td>
+                        [pending-view]
+                    </td>
+                    <td>
+                        [pending-count]
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        سفارشات ناموفق
+                    </td>
+                    <td>
+                        [failed-view]
+                    </td>
+                    <td>
+                        [failed-count]
+                    </td>
+                </tr>
             </tbody>
         </table>
-    </div>
-
-    <div id="Tab3" class="tab-content">
         <h3>توضیحات</h3>
         <div class='order-list-desc'>
             <ol>
@@ -124,9 +153,13 @@
         </div>
     </div>
 
-    <div id="Tab4" class="tab-content">
-        <h3>درباره افزونه </h3>
+    <div id="Tab3" class="tab-content">
+    <h3>درباره افزونه </h3>        
+    <p>این افزونه بخش سفارشات دیجیکالا را در سایت وردپرس شما به نمایش می اورد و تمامی وضعیت های سفارش را برای مشتریان شما نمایش میدهد</p>
+    <p>با فعال سازی این افزونه، بخش سفارشات در داشبورد کاربری ووکامرس به ظاهر دیجیکالا تغییر می کند.</p>
+    <p>این افزونه توسط تیم اسکانو برنامه نویسی شده است و درصورتی که نیاز به تغییر اختصاصی در افزونه و یا اضافه کردن وضعیت های دیگر میباشد در تیکت اعلام فرمایید</p>
     </div>
+
 
 
 

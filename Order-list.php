@@ -23,6 +23,7 @@ class OrderList
     }
     public function activation()
     {
+        add_action('admin_notices', [$this, 'woo_order_list_activation_notice']);
     }
     public function deactivation()
     {
@@ -40,7 +41,8 @@ class OrderList
         add_action('wp_enqueue_scripts', [$this, 'add_style']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_custom_admin_styles']);
         add_action('admin_enqueue_scripts', [$this, 'add_admin_scripts']);
-        add_action('wp_enqueue_scripts', [$this,'add_script']);
+        add_action('wp_enqueue_scripts', [$this, 'add_script']);
+        add_action('admin_init', [$this, 'activation']);
     }
 
     public function add_classes()
@@ -61,7 +63,8 @@ class OrderList
         wp_register_style('WC_order_list_style', ORD_LI_URL . 'src/css/style.css');
         wp_enqueue_style('WC_order_list_style');
     }
-    public function add_script(){
+    public function add_script()
+    {
         wp_enqueue_script('WC_order_list-script', ORD_LI_URL . 'src/js/script.js', array('jquery'), '1.0', true);
     }
     public function enqueue_custom_admin_styles()
@@ -69,10 +72,22 @@ class OrderList
         wp_enqueue_style('custom-admin-styles', ORD_LI_URL . 'src/css/admin.css');
     }
 
-    public function add_admin_scripts(){
+    public function add_admin_scripts()
+    {
         wp_enqueue_script('WC_order_list_admin_script', ORD_LI_URL . 'src/js/admin.js', array('jquery'), '1.0', true);
-
     }
+    function woo_order_list_activation_notice()
+    {
+        // Check if WooCommerce plugin is not active
+        if (!is_plugin_active('woocommerce/woocommerce.php')) {
+            $woocommerce_install_url = admin_url('plugin-install.php?s=woocommerce&tab=search&type=term');
+            $message = sprintf(
+                __('<strong>افزونه لیست سفارشات اسکانو</strong> نیازمند نصب و فعال سازی   <a href="%s">ووکامرس</a> میباشد', 'woo_order_list'),
+                esc_url($woocommerce_install_url)
+            );
 
+            echo '<div class="notice notice-warning is-dismissible"><p>' . $message . '</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'woo_order_list') . '</span></button></div>';
+        }
+    }
 }
 new OrderList();
