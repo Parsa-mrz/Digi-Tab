@@ -14,8 +14,8 @@ class OrderMenu
     public function add_menu_order()
     {
         add_menu_page(
-            'لیست سفارشات ووکامرس',
-            'لیست سفارشات ووکامرس',
+            'لیست سفارشات ',
+            'لیست سفارشات ',
             'manage_options',
             'order_list',
             [$this, 'wc_order_list_callback'],
