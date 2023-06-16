@@ -3,7 +3,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
 ?>
 <div class="card-body mr-custom main-body-container fontLoad">
   <div class="details-container-custom" style="justify-content: flex-start;">
-    <a href="#" style="display: contents;">
+    <a href="<?= $dashboard_url . 'orders/'; ?>" style="display: contents;">
       <i class="fa fa-mail-forward" style="margin-top: 4px;"></i>
       <p class="card-title title-details">جزيیات سفارش</p>
     </a>

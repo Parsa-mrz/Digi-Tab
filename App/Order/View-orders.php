@@ -32,41 +32,5 @@ $phone = $order->get_data()['billing']['phone'];
 $payment = $order->get_data()['payment_method_title'];
 // product img and title 
 $order_items = $order->get_items();
-// foreach ($order_items as $item) {
-//     // list of product in order 
-//     $product = $item->get_product();
-//     // product price 
-//     $product_price = $product->get_price();
-//     // product title 
-//     $product_title = $product->get_title();
-//     // product image 
-//     $product_image = $product->get_image();
-//     echo " عکس محصول : " . $product_image;
-//     echo "عنوان محصول : " . $product_title;
-//     // product url 
-//     $slug = $product->get_slug();
-//     $product_url = home_url() . '/products/' . $slug;
-//     // downloadable file 
-//     $downloads = $product->get_downloads();
-//     foreach ($downloads as $download) {
-//         // Get the download URL
-//         $download_url = $download['file'];
-//         // name of downlaod url 
-//         $download_name = $download['name'];
-//         // Get the download limit (-1 indicates no limit)
-//         $download_limit = $download['download_limit'];
-
-//         // Get the download expiration (-1 indicates no expiration)
-//         $download_expiry = $download['download_expiry'];
-
-//         // Output the download information
-//         echo "Download URL: " . $download_url;
-//         echo "<br>";
-//         echo $download_name;
-//         echo "<br>";
-//         echo "Download Limit: " . $download_limit;
-//         echo "<br>";
-//         echo "Download Expiration: " . $download_expiry;
-//         echo "<br>";
-//     }
-// }
+// orders url 
+$dashboard_url = get_permalink( get_option('woocommerce_myaccount_page_id') );
