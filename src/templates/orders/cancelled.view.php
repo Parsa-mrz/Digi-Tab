@@ -4,8 +4,6 @@ foreach ($cancelled_orders as $order) {
     $order_date = $order->get_date_created();
     $order_total = wc_price($order->get_total());
     $order_discount = wc_price($order->get_discount_total());
-
-    $formatted_date = date('j F  Y', strtotime($order_date));
 ?>
     <div class="card card-container-custom custom-font">
         <div class="card-body mr-custom">
@@ -14,7 +12,7 @@ foreach ($cancelled_orders as $order) {
                 <h3 class="card-title canceled-title" style="padding-right:10px"><i class="fa fa-window-close"></i> لغو شده</h3>
             </div>
             <div class="details-container-custom">
-                <p class="card-title"> تاریخ : <?= $formatted_date ?></p>
+                <p class="card-title"> تاریخ : <?= wc_format_datetime($order_date) ?></p>
                 <p class="card-title"> کد سفارش : <?= $order_number ?></p>
                 <p class="card-title">مبلغ : <?= $order_total ?></p>
             </div>
