@@ -45,7 +45,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
     // list of product in order 
     $product = $item->get_product();
     // product price 
-    $product_price = $product->get_price();
+    $product_price = wc_price($product->get_price());
     // product title 
     $product_title = $product->get_title();
     // product image 
@@ -55,20 +55,11 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
     $product_url = home_url() . '/products/' . $slug;
   ?>
     <div class="card-body mr-custom card-details-container">
-      <!-- <div class="details-container-custom">
-        <p class="card-title"> مرسوله ۱ از ۱</p>
-        <p class="card-title" style="color:red;"> ارسال عادی <i class="fa fa-truck"></i></p>
-      </div>
-      <div>
-      </div>
-      <div class="details-container-custom">
-        <p class="card-title"> مبلغ مرسوله : <?= $product_price ?></p>
-      </div> -->
-      <!-- <hr> -->
       <div class="details-container-custom" style="justify-content:flex-start;">
         <a href='<?= $product_url ?>'> <?= $product_image ?></a>
         <div class="card-order-details">
           <span><?= $product_title ?></span>
+          <span><?= $product_price ?></span>
         </div>
       </div>
     </div>
