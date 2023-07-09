@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 jQuery(document).ready(function ($) {
-  $('#show-payment-info').click(function () {
-    $('#payment-info').slideToggle();
-  })
-})
+  $("#show-payment-info").click(function () {
+    $("#payment-info").slideToggle();
+  });
+});
+

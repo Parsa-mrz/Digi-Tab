@@ -19,3 +19,5 @@ function openTab(evt, tabName) {
   // Add the "active" class to the button that opened the tab
   evt.currentTarget.className += " active";
 }
+
+
