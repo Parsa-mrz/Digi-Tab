@@ -98,6 +98,41 @@ h3.card-title.canceled-title {
   justify-content: space-between;
   width: 500px;
 }
+
+/* added by masbal start */
+.detail-container-custom-header {
+  background-color: #bbcaff;
+  border: 1px solid #7291ff;
+  width: 100% !important;
+  justify-content: space-around;
+  height: 50px;
+  border-radius: 5px;
+  align-items: center;
+}
+.detail-container-custom-main-body {
+  border: 1px solid #e6e3e3;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px 10px;
+}
+.body-items-container {
+  width: auto;
+}
+.float-left {
+  float: left;
+}
+.rotate90 {
+  rotate: -90deg;
+}
+.image-mw img {
+  max-with: 40% !important;
+}
+/* added by masbal end */
+
+.detail-container-custom-header p {
+  margin-bottom: 0px;
+}
+
 @media (max-width: 767.98px) {
   .details-container-custom {
     flex-direction: column;
@@ -153,10 +188,10 @@ hr {
   background-color: #ccc;
 }
 .more-custom {
-  color: #3d47ff;
+  color: #7291ff;
   cursor: pointer;
+  font-weight: 600;
 }
-
 .sell-details {
   display: none;
 }
@@ -172,8 +207,8 @@ hr {
   margin: 0 5px;
   font-weight: bold;
 }
-.none{
-  display: none!important;
+.none {
+  display: none !important;
 }
 .tabcontent.active {
   display: block;
@@ -181,11 +216,11 @@ hr {
 button.tablinks.active {
   color: red;
   border: none;
-  background: transparent!important;
-  border-bottom: 4px solid red!important;
+  background: transparent !important;
+  border-bottom: 4px solid red !important;
 }
 button.tablinks {
-  border: none!important;
+  border: none !important;
   margin: 0;
   font-size: 14px;
   color: #767790;
@@ -193,7 +228,7 @@ button.tablinks {
 }
 button.tablinks:hover {
   background: transparent;
-  border-bottom: 4px solid red!important;
+  border-bottom: 4px solid red !important;
   color: red;
 }
 .count {
@@ -202,9 +237,9 @@ button.tablinks:hover {
   padding: 3px 9px;
   border-radius: 10px;
 }
-button.tablinks:hover .count{
-  background-color: red!important;
+button.tablinks:hover .count {
+  background-color: red !important;
 }
-button.tablinks.active .count{
-  background-color: red!important;
+button.tablinks.active .count {
+  background-color: red !important;
 }

@@ -25,4 +25,7 @@ jQuery(document).ready(function ($) {
     $("#payment-info").slideToggle();
   });
 });
-
+function handleClick() {
+  let arrowsign = document.getElementById("arrowsign");
+  arrowsign.classList.toggle("rotate90");
+}

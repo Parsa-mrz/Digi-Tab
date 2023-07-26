@@ -8,18 +8,45 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
       <p class="card-title title-details">جزيیات سفارش</p>
     </a>
   </div>
-  <hr>
-  <div class="details-container-custom" style="width: 500px;">
+  <!-- <hr> -->
+  <div class="details-container-custom detail-container-custom-header" style="width: 500px;">
     <p class="card-title"> کد پیگیری سفارش : <?= $order_id ?></p>
     <p class="card-title"> تاریخ ثبت سفارش : <?= $order_date ?></p>
   </div>
-  <hr>
-  <div class="details-container-custom" style="width: 400px;">
+  <!-- Added by MasBal start -->
+  <div class="detail-container-custom-main-body">
+    <div class="details-container-custom body-items-container">
+      <p class="card-title"> تحویل گیرنده : <?= $firstName . ' ' . $lastName  ?></p>
+      <p class="card-title"> شماره موبایل : <?= $phone ?></p>
+      <p class="card-title"> کد پستی : <?= $postcode ?></p>
+    </div>
+    <div class="details-container-custom body-items-container">
+      <p class="card-title">تخفیف: <?= $discountTotal ?></p>
+      <p class="card-title"> هزینه ارسال : <?= $shippingTotal ?></p>
+      <p class="card-title"> مبلغ : <?= $total ?></p>
+    </div>
+    <p class="card-title float-left more-custom" id='show-payment-info' onClick="handleClick()">
+      جزيیات
+      &nbsp;
+      <i id="arrowsign" class="fa-solid fa-chevron-left"></i>
+    </p>
+    <div class="details-container-custom body-items-container" id='payment-info'>
+      <p class="card-title"> آدرس : <?= $address ?></p>
+      <p class="card-title"> شیوه پرداخت: <?= $payment ?></p>
+
+      <p class="card-title"> <?= $paymentTotal ?> </p>
+      <p class="card-title"> <?= $payment_date ?> </p>
+    </div>
+  </div>
+
+  <!-- Added by MasBal End -->
+  <!-- <hr>
+  <div class="details-container-custom">
     <p class="card-title"> تحویل گیرنده : <?= $firstName . ' ' . $lastName  ?></p>
     <p class="card-title"> شماره موبایل : <?= $phone ?></p>
     <p class="card-title"> کد پستی : <?= $postcode ?></p>
-
   </div>
+
   <div class="details-container-custom">
     <p class="card-title"> آدرس : <?= $address ?></p>
   </div>
@@ -37,7 +64,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
     <p class="card-title"> مبلغ سفارش - پرداخت موفق </p>
     <p class="card-title"> <?= $paymentTotal ?> </p>
     <p class="card-title"> <?= $payment_date ?> </p>
-  </div>
+  </div> -->
   <hr>
 
   <?php
@@ -56,7 +83,7 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
   ?>
     <div class="card-body mr-custom card-details-container">
       <div class="details-container-custom" style="justify-content:flex-start;">
-        <a href='<?= $product_url ?>'> <?= $product_image ?></a>
+        <a class="image-mw" href='<?= $product_url ?>' style="max-with: 40% !important;"> <?= $product_image ?></a>
         <div class="card-order-details">
           <span><?= $product_title ?></span>
           <span><?= $product_price ?></span>

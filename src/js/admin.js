@@ -17,7 +17,21 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
 
   // Add the "active" class to the button that opened the tab
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className.add("active");
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to hide the custom alert after 1 second with fadeout
+  function hideCustomAlert() {
+    var customAlert = document.querySelector(".alert");
+    if (customAlert) {
+      customAlert.style.transition = "opacity 3s";
+      customAlert.style.opacity = "0";
+      setTimeout(function () {
+        customAlert.style.display = "none";
+      }, 2000); // Hide the element after 0.5 seconds
+    }
+  }
 
-
+  // Set the timeout to call the hideCustomAlert function after 1 second
+  setTimeout(hideCustomAlert, 2000);
+});

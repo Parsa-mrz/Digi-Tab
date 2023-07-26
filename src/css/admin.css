@@ -14,17 +14,31 @@
   border: 1px solid;
   margin: auto;
   text-align: center;
-  width: 450px;
-  height: 50px;
+  width: 600px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: #7291ff;
+  font-size: 16px;
 }
-
+.order-list-table thead tr th {
+  background-color: #bbcaff;
+  font-weight: 800;
+  font-size: 18px;
+}
+.tab-title {
+  fonst-size: 32px !important;
+}
 /* Style for the tabs */
 .custom-tabs {
   font-family: iranyekan;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid #7291ff;
   display: flex;
   background-color: #f1f1f1;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-radius: 5px;
 }
 /* Style for the tab links */
 .custom-tabs button {
@@ -35,6 +49,19 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+}
+.custom-tabs .tab {
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  background: #bbcaff;
+  border-radius: 16px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  cursor: pointer;
+  margin: 0 15px;
 }
 /* Change the color of the active tab link */
 .custom-tabs button.active {
@@ -48,12 +75,14 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-top: none;
+
+  border-radius: 0 0 5px 5px;
 }
 .tab-content h3,
 .woo-order-list h1 {
   font-family: iranyekan;
 }
-p.allert {
+p.alert {
   background: #21c621;
   padding: 12px 30px;
   border-radius: 20px;
@@ -61,4 +90,38 @@ p.allert {
   font-family: "iranyekan";
   font-size: 17px;
   font-weight: bold;
+}
+.active {
+  background-color: black;
+}
+.item {
+  margin: 15px 0;
+}
+.item input {
+  border-color: #7291ff;
+}
+.item label {
+  font-size: 18px !important;
+}
+.tab1-btn {
+  background-color: #7291ff;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #5a7efe;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.tab1-btn:hover {
+  background-color: #587bfb;
+  box-shadow: 0px 5px 5px 3px #dfdfdf;
+}
+
+.order-list-table {
+  border: none;
+}
+
+.f16px {
+  font-size: 16px;
 }

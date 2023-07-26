@@ -55,7 +55,7 @@ class OrderMenu
                 $value = isset($_POST[$checkbox]) && $_POST[$checkbox] === 'on' ? 1 : 0;
                 update_option($option, $value);
             }
-        $this->message = '<p class="allert">تنظیمات با موفقیت ذخیره شد</p>';
+        $this->message = '<p class="alert">تنظیمات با موفقیت ذخیره شد</p>';
         }
     }
 }
