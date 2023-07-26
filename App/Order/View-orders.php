@@ -1,4 +1,5 @@
 <?php
+require_once(ORD_LI_DIR . 'App/Dashboard/Order_list_core.php');
 // order id 
 $order_id = isset($_SERVER['REQUEST_URI']) ? basename($_SERVER['REQUEST_URI']) : '';
 $order_id = preg_replace('/[^0-9]/', '', $order_id);

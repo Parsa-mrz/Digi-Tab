@@ -9,7 +9,7 @@ class OrderMenu
 {
     public $message;
     public $key_token;
-    public $product_token = 'qr4325r32r5afewe';
+    public $product_token = 'd15bfb85-ee15-4ac8-b30a-b4185ae278ac';
 
     public function __construct()
     {
@@ -54,10 +54,12 @@ class OrderMenu
     {
         $this->key_token = $_POST['active'];
         $stored_key = get_option('order_list_key');
-        if (!$stored_key) {
+        if ($stored_key === false) {
             $this->activation($this->key_token, $this->product_token);
+            $this->check_activation($stored_key);
+        } else {
+            $this->check_activation($stored_key);
         }
-        $this->check_activation($stored_key);
         require_once(ORD_LI_DIR . DIRECTORY_SEPARATOR . 'src/templates/dashboard/core.view.php');
     }
 
@@ -87,10 +89,10 @@ class OrderMenu
 
         if ($result->status == 'successful') {
             add_option('order_list_key', $key_token);
-            echo ('<div style="color:#fff;background-color:green;padding:10px">' . $result->message . '</div>'); 
+            echo ('<div style="color:#fff;background-color:green;padding:10px;display: block;border-radius: 6px;margin: 30px;">' . $result->message . '</div>');
         } else {
-            if (!is_object($result->message)) { 
-                echo ('<div style="color:#fff;background-color:red;padding:10px">' . $result->message . '</div>'); 
+            if (!is_object($result->message)) {
+                echo ('<div style="color:#fff;background-color:red;padding:10px;display: block;border-radius: 6px;margin: 30px;">' . $result->message . '</div>');
             } else {
                 foreach ($result->message as $message) {
                     foreach ($message as $msg) {
@@ -106,10 +108,10 @@ class OrderMenu
         $result = Order_list_core::isValid($key_token);
 
         if ($result->status == 'successful') {
-            echo ('<div style="color:#fff;background-color:green;padding:10px">' . $result->message . '</div>'); 
+            echo ('<div class="alert" style="color:#fff;background-color:green;padding:10pxmargin: 30px;display: block;border-radius: 6px;margin: 30px;">' . $result->message . '</div>');
         } else {
-            if (!is_object($result->message)) { 
-                echo ('<div style="color:#fff;background-color:red;padding:10px">' . $result->message . '</div>');
+            if (!is_object($result->message)) {
+                echo ('<div class="alert" style="color:#fff;background-color:red;padding:10pxmargin: 30px;display: block;border-radius: 6px;margin: 30px;">' . $result->message . '</div>');
             } else {
                 foreach ($result->message as $message) {
                     foreach ($message as $msg) {
