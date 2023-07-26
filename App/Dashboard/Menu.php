@@ -2,9 +2,14 @@
 
 namespace App\Dashboard;
 
+use Order_list_core;
+
+require_once(ORD_LI_DIR . 'App/Dashboard/Order_list_core.php');
 class OrderMenu
 {
     public $message;
+    public $key_token;
+    public $product_token = 'qr4325r32r5afewe';
 
     public function __construct()
     {
@@ -22,6 +27,14 @@ class OrderMenu
             'dashicons-cart',
             '40'
         );
+        add_submenu_page(
+            'order_list',
+            'فعال سازی افزونه',
+            'فعال سازی افزونه',
+            'manage_options',
+            'active_order_list',
+            [$this, 'wc_active_order_list_callback']
+        );
     }
 
     public function wc_order_list_callback()
@@ -37,6 +50,16 @@ class OrderMenu
         $refunded = get_option('refunded-tab');
         require_once(ORD_LI_DIR . DIRECTORY_SEPARATOR . 'src/templates/dashboard/menu.view.php');
     }
+    public function wc_active_order_list_callback()
+    {
+        $this->key_token = $_POST['active'];
+        $stored_key = get_option('order_list_key');
+        if (!$stored_key) {
+            $this->activation($this->key_token, $this->product_token);
+        }
+        $this->check_activation($stored_key);
+        require_once(ORD_LI_DIR . DIRECTORY_SEPARATOR . 'src/templates/dashboard/core.view.php');
+    }
 
     public function validate()
     {
@@ -50,12 +73,50 @@ class OrderMenu
                 'pending' => 'pending-tab',
                 'refunded' => 'refunded-tab'
             );
-        
+
             foreach ($checkboxes as $checkbox => $option) {
                 $value = isset($_POST[$checkbox]) && $_POST[$checkbox] === 'on' ? 1 : 0;
                 update_option($option, $value);
             }
-        $this->message = '<p class="alert">تنظیمات با موفقیت ذخیره شد</p>';
+            $this->message = '<p class="alert">تنظیمات با موفقیت ذخیره شد</p>';
+        }
+    }
+    public function activation($key_token, $product_token)
+    {
+        $result = Order_list_core::install($key_token, $product_token);
+
+        if ($result->status == 'successful') {
+            add_option('order_list_key', $key_token);
+            echo ('<div style="color:#fff;background-color:green;padding:10px">' . $result->message . '</div>'); 
+        } else {
+            if (!is_object($result->message)) { 
+                echo ('<div style="color:#fff;background-color:red;padding:10px">' . $result->message . '</div>'); 
+            } else {
+                foreach ($result->message as $message) {
+                    foreach ($message as $msg) {
+                        echo $msg . '<br>';
+                    }
+                }
+            }
+        }
+    }
+    public static function check_activation($key_token)
+    {
+
+        $result = Order_list_core::isValid($key_token);
+
+        if ($result->status == 'successful') {
+            echo ('<div style="color:#fff;background-color:green;padding:10px">' . $result->message . '</div>'); 
+        } else {
+            if (!is_object($result->message)) { 
+                echo ('<div style="color:#fff;background-color:red;padding:10px">' . $result->message . '</div>');
+            } else {
+                foreach ($result->message as $message) {
+                    foreach ($message as $msg) {
+                        echo $msg . '<br>';
+                    }
+                }
+            }
         }
     }
 }

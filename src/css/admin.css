@@ -125,3 +125,10 @@ p.alert {
 .f16px {
   font-size: 16px;
 }
+.items {
+  text-align: center;
+  border: 2px dashed #7291ff;
+  padding: 50px 20px;
+  margin: 15rem;
+  border-radius: 8pc;
+}
