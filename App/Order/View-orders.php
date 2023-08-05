@@ -7,9 +7,9 @@ $order_id = preg_replace('/[^0-9]/', '', $order_id);
 $discountTotal = wc_price($order->get_data()['discount_total']);
 // total shipping 
 // order date 
-$order_date = $order->get_date_created()->format('Y-m-d');
+$order_date = wc_format_datetime($order->get_date_created());
 // payment date 
-$payment_date = $order->get_date_paid()->format('Y-m-d');
+$payment_date = wc_format_datetime($order->get_date_paid());
 // number of each item 
 $product_count = $order->get_item_count();
 $shippingTotal = wc_price($order->get_data()['shipping_total']);
@@ -34,4 +34,4 @@ $payment = $order->get_data()['payment_method_title'];
 // product img and title 
 $order_items = $order->get_items();
 // orders url 
-$dashboard_url = get_permalink( get_option('woocommerce_myaccount_page_id') );
+$dashboard_url = get_permalink(get_option('woocommerce_myaccount_page_id'));

@@ -54,19 +54,21 @@
   width: 48px;
   height: 48px;
   padding: 8px;
-  background: #bbcaff;
+  background-color: #bbcaff;
   border-radius: 16px;
-  overflow: hidden;
+  /* overflow: hidden;
   justify-content: center;
   align-items: center;
-  display: inline-flex;
+  display: inline-flex; */
   cursor: pointer;
   margin: 0 15px;
 }
+
 /* Change the color of the active tab link */
 .custom-tabs button.active {
   background-color: #ccc;
 }
+
 
 /* Style for the tab content */
 .tab-content {
@@ -129,8 +131,17 @@ p.alert {
   text-align: center;
   border: 2px dashed #7291ff;
   padding: 50px 20px;
-  margin: 15rem;
-  border-radius: 8pc;
+  margin: 2rem;
+  border-radius: 8px;
+}
+.items label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-licence{
+  width: 400px;
+  text-align: center;
 }
 .blur {
   position: fixed;
@@ -161,4 +172,7 @@ a.active_message.active-btn {
 a.active_message.active-btn:hover {
   background: #e60909;
   color: #fff;
+}
+.image-scale{
+  width: 48px;
 }

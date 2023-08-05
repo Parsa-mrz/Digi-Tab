@@ -167,6 +167,7 @@ h3.card-title.canceled-title {
 }
 .tab {
   border-bottom: 1px solid #e0e0e6;
+  padding-right: 5px;
 }
 .main-body-container {
   border: 1px solid #ccc;
@@ -221,7 +222,7 @@ button.tablinks.active {
 }
 button.tablinks {
   border: none !important;
-  margin: 0;
+  margin: 0 -5px;
   font-size: 14px;
   color: #767790;
   font-weight: bold;
@@ -234,8 +235,8 @@ button.tablinks:hover {
 .count {
   background: #767790;
   color: #fff;
-  padding: 3px 9px;
-  border-radius: 10px;
+  padding: 5px 14px;
+  border-radius: 20px;
 }
 button.tablinks:hover .count {
   background-color: red !important;
@@ -275,4 +276,10 @@ a.active_message.active-btn {
 a.active_message.active-btn:hover {
   background: #e60909;
   color: #fff;
+}
+a.image-mw {
+  max-width: 20%;
+}
+.card-body.mr-custom.card-details-container {
+  margin-bottom: 10px;
 }

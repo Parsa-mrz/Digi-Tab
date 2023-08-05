@@ -1,22 +1,16 @@
 <div class="wrap woo-order-list">
-    <?php
-    $stored_key = get_option('order_list_key');
-    if ($stored_key === false) {?>
-        <div class="blur"></div>
-        <h2 class='active_message'>لطفا لایسنس افزونه را از سایت ژاکت تهیه نمایید سپس افزونه را فعال کنید</h2>
-        <a href="<?= home_url('/wp-admin/admin.php?page=active_order_list') ?>" class='active_message active-btn'>فعال سازی افزونه</a>
-    <?php
-    }
-    ?>
+
 
     <h1>تنظیمات افزونه لیست سفارشات</h1>
     <?= $message ?>
     <div class="custom-tabs">
         <div class="tab" onclick="openTab(event, 'Tab1')">
-            <i> <img src="<?= ORD_LI_URL . 'src/icons/tab1.svg' ?>"></i>
+            <i>
+                <img src="<?= ORD_LI_URL . 'src/icons/tab1.svg' ?>">
+            </i>
         </div>
         <div class="tab" onclick="openTab(event, 'Tab2')">
-            <i> <img src="<?= ORD_LI_URL . 'src/icons/tab2.svg' ?>"></i>
+            <i> <img class="image-scale" src="<?= ORD_LI_URL . 'src/icons/tab22.png' ?>"></i>
         </div>
         <div class="tab" onclick="openTab(event, 'Tab3')">
             <i> <img src="<?= ORD_LI_URL . 'src/icons/tab3.svg' ?>"></i>

@@ -17,15 +17,10 @@ $refunded = get_option('refunded-tab');
 
 do_action('woocommerce_before_account_orders', $has_orders); // Action hook before displaying orders
 ?>
-<?php
-$stored_key = get_option('order_list_key');
-if ($stored_key === false) { ?>
-    <div class="blur"></div>
-    <h2 class='active_message'>لطفا لایسنس افزونه را از سایت ژاکت تهیه نمایید سپس افزونه را فعال کنید</h2>
-    <a href="<?= home_url('/wp-admin/admin.php?page=active_order_list') ?>" class='active_message active-btn'>فعال سازی افزونه</a>
-<?php
-}
-?>
+<!-- LISENCE FORM -->
+
+
+
 <div class='my-orders'>
     <h2>تاریخچه سفارشات</h2>
     <div class="tab">
@@ -39,7 +34,7 @@ if ($stored_key === false) { ?>
     </div>
     <div class='my-orders-tabs'>
 
-        <div id="Tab1" class="tabcontent">
+        <div id="Tab1" class="tabcontent ">
             <?php do_shortcode('[processing-view]') ?>
         </div>
 
