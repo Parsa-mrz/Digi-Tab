@@ -239,10 +239,10 @@ button.tablinks:hover {
   border-radius: 20px;
 }
 button.tablinks:hover .count {
-  background-color: red !important;
+  background-color: red;
 }
 button.tablinks.active .count {
-  background-color: red !important;
+  background-color: red;
 }
 .blur {
   position: fixed;

@@ -69,7 +69,6 @@
   background-color: #ccc;
 }
 
-
 /* Style for the tab content */
 .tab-content {
   font-family: iranyekan;
@@ -134,12 +133,12 @@ p.alert {
   margin: 2rem;
   border-radius: 8px;
 }
-.items label{
+.items label {
   display: block;
   margin-bottom: 10px;
 }
 
-.input-licence{
+.input-licence {
   width: 400px;
   text-align: center;
 }
@@ -173,6 +172,6 @@ a.active_message.active-btn:hover {
   background: #e60909;
   color: #fff;
 }
-.image-scale{
+.image-scale {
   width: 48px;
 }

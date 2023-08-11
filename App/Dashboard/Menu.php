@@ -48,6 +48,7 @@ class OrderMenu
         $onhold = get_option('onhold-tab');
         $pending = get_option('pending-tab');
         $refunded = get_option('refunded-tab');
+        $color = get_option('digi_tab_color');
         require_once(ORD_LI_DIR . DIRECTORY_SEPARATOR . 'src/templates/dashboard/menu.view.php');
     }
     public function wc_active_order_list_callback()
@@ -75,6 +76,8 @@ class OrderMenu
                 'pending' => 'pending-tab',
                 'refunded' => 'refunded-tab'
             );
+            $color = $_POST['global_color'];
+            update_option( 'digi_tab_color', $color );
 
             foreach ($checkboxes as $checkbox => $option) {
                 $value = isset($_POST[$checkbox]) && $_POST[$checkbox] === 'on' ? 1 : 0;

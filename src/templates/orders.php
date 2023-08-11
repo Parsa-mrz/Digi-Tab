@@ -14,6 +14,7 @@ $failed = get_option('failed-tab');
 $onhold = get_option('onhold-tab');
 $pending = get_option('pending-tab');
 $refunded = get_option('refunded-tab');
+$color = get_option('digi_tab_color');
 
 do_action('woocommerce_before_account_orders', $has_orders); // Action hook before displaying orders
 ?>
@@ -24,6 +25,18 @@ do_action('woocommerce_before_account_orders', $has_orders); // Action hook befo
 <div class='my-orders'>
     <h2>تاریخچه سفارشات</h2>
     <div class="tab">
+        <style>
+            button.tablinks.active,
+            button.tablinks:hover {
+                color: <?= $color ?>;
+                border-bottom: 4px solid <?= $color ?> !important;
+            }
+
+            button.tablinks.active .count,
+            button.tablinks:hover .count {
+                background-color: <?= $color ?>;
+            }
+        </style>
         <button class="tablinks active <?php echo $processing == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab1')"> جاری <span class='count'><?= do_shortcode('[processing-count]') ?></span> </button>
         <button class="tablinks <?php echo $completed == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab2')"> تکمیل شده <span class='count'><?= do_shortcode('[complete-count]') ?></span></button>
         <button class="tablinks <?php echo $refunded == 0 ? 'none' : '' ?>" onclick="openTab(event, 'Tab3')">مرجوع شده <span class='count'><?= do_shortcode('[refund-count]') ?></span></button>

@@ -56,8 +56,8 @@ require_once(ORD_LI_DIR . "App/Order/View-orders.php");
       <div class="details-container-custom" style="justify-content:flex-start;">
         <a class="image-mw" href='<?= $product_url ?>' style="max-with: 40% !important;"> <?= $product_image ?></a>
         <div class="card-order-details">
-          <span class="d-block">نام محصول‌ : <?= $product_title ?></span>
-          <span class="d-block">قیمت محصول : <?= $product_price ?></span>
+          <span class="d-block"> <?= $product_title ?></span>
+          <span class="d-block"> <?= $product_price ?></span>
         </div>
       </div>
     </div>

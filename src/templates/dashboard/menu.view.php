@@ -1,6 +1,4 @@
 <div class="wrap woo-order-list">
-
-
     <h1>تنظیمات افزونه لیست سفارشات</h1>
     <?= $message ?>
     <div class="custom-tabs">
@@ -18,34 +16,39 @@
     </div>
     <div id="Tab1" class="tab-content" style="display: block;">
         <h1 class="tab1-title">تنظیمات افزونه</h1>
+        <p class="menu-desc">فعال سازی / غیرفعال سازی تب های وضعیت سفارش در داشبورد کاربر</p>
         <form method="POST">
             <div class="item">
                 <input type="checkbox" <?php echo $processing == 1 ? 'checked' : ''; ?> name='processing'>
-                <label>فعال سازی تب سفارشات جاری</label>
+                <label> تب سفارشات جاری</label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $completed == 1 ? 'checked' : ''; ?> name='completed'>
-                <label>فعال سازی تب سفارشات تکمیل شده</label>
+                <label> تب سفارشات تکمیل شده</label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $refunded == 1 ? 'checked' : ''; ?> name='refunded'>
-                <label>فعال سازی تب سفارشات مرجوع شده</label>
+                <label> تب سفارشات مرجوع شده</label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $failed == 1 ? 'checked' : ''; ?> name='failed'>
-                <label>فعال سازی تب سفارشات ناموفق</label>
+                <label> تب سفارشات ناموفق</label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $onhold == 1 ? 'checked' : ''; ?> name='on-hold'>
-                <label>فعال سازی تب سفارشات در انتظار پرداخت</label>
+                <label> تب سفارشات در انتظار پرداخت</label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $cancelled == 1 ? 'checked' : ''; ?> name='cancelled'>
-                <label>فعال سازی تب سفارشات لغو شده </label>
+                <label> تب سفارشات لغو شده </label>
             </div>
             <div class="item">
                 <input type="checkbox" <?php echo $pending == 1 ? 'checked' : ''; ?> name='pending'>
-                <label>فعال سازی تب سفارشات در انتظار بررسی </label>
+                <label> تب سفارشات در انتظار بررسی </label>
+            </div>
+            <div class="item">
+                <input type="color" value="<?= isset($color) ? $color : 'red' ?>" name='global_color'>
+                <label> رنگ سراسری</label>
             </div>
             <div class="item">
                 <input type="submit" name="submit-form" class="tab1-btn" value="ذخیره تنظیمات">
