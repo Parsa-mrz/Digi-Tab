@@ -47,28 +47,28 @@ do_action('woocommerce_before_account_orders', $has_orders); // Action hook befo
     </div>
     <div class='my-orders-tabs'>
 
-        <div id="Tab1" class="tabcontent ">
+        <div id="Tab1" class="tabcontent <?php echo $processing == 0 ? 'none' : '' ?> ">
             <?php do_shortcode('[processing-view]') ?>
         </div>
 
-        <div id="Tab2" class="tabcontent">
+        <div id="Tab2" class="tabcontent <?php echo $completed == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[complete-view]') ?>
         </div>
 
-        <div id="Tab3" class="tabcontent">
+        <div id="Tab3" class="tabcontent <?php echo $refunded == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[refund-view]') ?>
         </div>
 
-        <div id="Tab4" class="tabcontent">
+        <div id="Tab4" class="tabcontent <?php echo $failed == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[failed-view]') ?>
         </div>
-        <div id="Tab5" class="tabcontent">
+        <div id="Tab5" class="tabcontent <?php echo $pending == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[pending-view]') ?>
         </div>
-        <div id="Tab6" class="tabcontent">
+        <div id="Tab6" class="tabcontent <?php echo $cancelled == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[cancelled-view]') ?>
         </div>
-        <div id="Tab7" class="tabcontent">
+        <div id="Tab7" class="tabcontent <?php echo $onhold == 0 ? 'none' : '' ?>">
             <?php do_shortcode('[onhold-view]') ?>
         </div>
     </div>

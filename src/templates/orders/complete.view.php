@@ -44,7 +44,7 @@ if (!$completed_orders) { ?>
     <div class="card card-container-custom custom-font empty">
         <div class="card-body mr-custom">
             <img src='<?= ORD_LI_URL . 'src/icons/order-empty.svg' ?>'>
-            <h1>شما سفارش جاری ندارید</h1>
+            <h1>شما سفارش تکمیل شده ندارید</h1>
         </div>
     </div>
 <?php

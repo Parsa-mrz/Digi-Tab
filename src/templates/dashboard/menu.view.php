@@ -19,31 +19,31 @@
         <p class="menu-desc">فعال سازی / غیرفعال سازی تب های وضعیت سفارش در داشبورد کاربر</p>
         <form method="POST">
             <div class="item">
-                <input type="checkbox" <?php echo $processing == 1 ? 'checked' : ''; ?> name='processing'>
+                <input class='check-input' type="checkbox" <?php echo $processing == 1 ? 'checked' : ''; ?> name='processing'>
                 <label> تب سفارشات جاری</label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $completed == 1 ? 'checked' : ''; ?> name='completed'>
+                <input class='check-input' type="checkbox" <?php echo $completed == 1 ? 'checked' : ''; ?> name='completed'>
                 <label> تب سفارشات تکمیل شده</label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $refunded == 1 ? 'checked' : ''; ?> name='refunded'>
+                <input class='check-input' type="checkbox" <?php echo $refunded == 1 ? 'checked' : ''; ?> name='refunded'>
                 <label> تب سفارشات مرجوع شده</label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $failed == 1 ? 'checked' : ''; ?> name='failed'>
+                <input class='check-input' type="checkbox" <?php echo $failed == 1 ? 'checked' : ''; ?> name='failed'>
                 <label> تب سفارشات ناموفق</label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $onhold == 1 ? 'checked' : ''; ?> name='on-hold'>
+                <input class='check-input' type="checkbox" <?php echo $onhold == 1 ? 'checked' : ''; ?> name='on-hold'>
                 <label> تب سفارشات در انتظار پرداخت</label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $cancelled == 1 ? 'checked' : ''; ?> name='cancelled'>
+                <input class='check-input' type="checkbox" <?php echo $cancelled == 1 ? 'checked' : ''; ?> name='cancelled'>
                 <label> تب سفارشات لغو شده </label>
             </div>
             <div class="item">
-                <input type="checkbox" <?php echo $pending == 1 ? 'checked' : ''; ?> name='pending'>
+                <input class='check-input' type="checkbox" <?php echo $pending == 1 ? 'checked' : ''; ?> name='pending'>
                 <label> تب سفارشات در انتظار بررسی </label>
             </div>
             <div class="item">

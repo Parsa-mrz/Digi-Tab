@@ -1,3 +1,4 @@
+
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
 
@@ -19,6 +20,7 @@ function openTab(evt, tabName) {
   // Add the "active" class to the button that opened the tab
   evt.currentTarget.className.add("active");
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide the custom alert after 1 second with fadeout
   function hideCustomAlert() {
