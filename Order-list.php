@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name:  Woo Order List
+Plugin Name:  Digi Tab
 Plugin URI: #
 Description: This plugin allows you to have own orders list to show
 Author: Parsa Mirzaie

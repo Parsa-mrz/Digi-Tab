@@ -25,6 +25,9 @@
   font-weight: 800;
   font-size: 18px;
 }
+.font {
+  font-family: iranyekan !important;
+}
 .tab-title {
   fonst-size: 32px !important;
 }
@@ -39,6 +42,7 @@
   align-items: center;
   padding: 15px 0;
   border-radius: 5px;
+  height: 100px;
 }
 /* Style for the tab links */
 .custom-tabs button {

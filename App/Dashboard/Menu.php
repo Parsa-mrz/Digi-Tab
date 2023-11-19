@@ -19,8 +19,8 @@ class OrderMenu
     public function add_menu_order()
     {
         add_menu_page(
-            'لیست سفارشات ',
-            'لیست سفارشات ',
+            'دیجی تب',
+            'دیجی تب',
             'manage_options',
             'order_list',
             [$this, 'wc_order_list_callback'],

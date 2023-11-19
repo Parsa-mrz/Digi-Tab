@@ -1,17 +1,20 @@
 <div class="wrap woo-order-list">
-    <h1>تنظیمات افزونه لیست سفارشات</h1>
+    <h1>تنظیمات افزونه دیجی تب</h1>
     <?= $message ?>
     <div class="custom-tabs">
         <div class="tab" onclick="openTab(event, 'Tab1')">
             <i>
                 <img src="<?= ORD_LI_URL . 'src/icons/tab1.svg' ?>">
             </i>
+            <h3 class="font">تنظیمات </h3>
         </div>
         <div class="tab" onclick="openTab(event, 'Tab2')">
             <i> <img class="image-scale" src="<?= ORD_LI_URL . 'src/icons/tab22.png' ?>"></i>
+            <h3 class="font">توضیحات </h3>
         </div>
         <div class="tab" onclick="openTab(event, 'Tab3')">
             <i> <img src="<?= ORD_LI_URL . 'src/icons/tab3.svg' ?>"></i>
+            <h3 class="font">درباره ما </h3>
         </div>
     </div>
     <div id="Tab1" class="tab-content" style="display: block;">
