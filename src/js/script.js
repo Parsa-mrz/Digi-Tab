@@ -1,4 +1,3 @@
-
 tabcontent = document.getElementsByClassName("tabcontent");
 tablinks = document.getElementsByClassName("tablinks");
 var counter = 1
@@ -7,8 +6,6 @@ for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].className += " active";
       tablinks[i].className += " active";
       counter -= 1
-    } else {
-      tabcontent[i].className += " none";
     }
 }
 
