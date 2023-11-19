@@ -1,24 +1,28 @@
+
 tabcontent = document.getElementsByClassName("tabcontent");
 tablinks = document.getElementsByClassName("tablinks");
 var counter = 1
 for (i = 0; i < tabcontent.length; i++) {
     if(tabcontent[i].className.includes("none")==false && counter != 0){
       tabcontent[i].className += " active";
-      tablinks[i].className += " active";
+      if(i!=0){
+        tablinks[i].className += " active";
+      }
       counter -= 1
     }
 }
 
+
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
+
+  tablinks = document.getElementsByClassName("tablinks");
 
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  tablinks = document.getElementsByClassName("tablinks");
-  console.log(tablinks.length)
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
