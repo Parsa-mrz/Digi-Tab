@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:  Digi Tab
-Plugin URI: #
+Plugin URI: https://eskanogroup.ir
 Description: This plugin allows you to have own orders list to show
 Author: Parsa Mirzaie
 Version: 1.0.0
@@ -24,6 +24,10 @@ class OrderList
     public function activation()
     {
         add_action('admin_notices', [$this, 'woo_order_list_activation_notice']);
+        add_action('wp_dashboard_setup', [$this, 'add_dashboard_widget']);
+        add_filter('admin_footer_text', [$this, 'remove_footer_admin']);
+        add_action('admin_notices', [$this, 'display_custom_alert']);
+        add_filter('plugin_row_meta', [$this, 'add_plugin_row_meta'], 10, 2);
     }
     public function deactivation()
     {
@@ -85,9 +89,40 @@ class OrderList
                 __('<strong>افزونه لیست سفارشات اسکانو</strong> نیازمند نصب و فعال سازی   <a href="%s">ووکامرس</a> میباشد', 'woo_order_list'),
                 esc_url($woocommerce_install_url)
             );
+            $custom_link = '<a href="https://your-custom-link.com" target="_blank">Custom Link</a>';
+
 
             echo '<div class="notice notice-warning is-dismissible"><p>' . $message . '</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'woo_order_list') . '</span></button></div>';
         }
+    }
+    public function add_dashboard_widget()
+    {
+        wp_add_dashboard_widget(
+            'digitab_dashboard_widget',           // Widget slug
+            __('دیجی تب', 'woo_order_list'),           // Widget title
+            [$this, 'digitab_widget_content']    // Callback function to display content
+        );
+    }
+    public function digitab_widget_content()
+    {
+        include_once(ORD_LI_DIR  . '/src/templates/dashboard/widget.php');
+    }
+    public function display_custom_alert()
+    {
+        include_once(ORD_LI_DIR  . '/src/templates/dashboard/notice.php');
+    }
+
+    function remove_footer_admin()
+    {
+        echo '<span id="footer-thankyou" class="font" style="font-size:15px!important">توسعه و طراحی شده توسط <a class="font" href="http://www.eskanogroup.ir" target="_blank" style="text-decoration:none">اسکانو </a></span>';
+    }
+    public function add_plugin_row_meta($links, $file)
+    {
+        if (plugin_basename(__FILE__) === $file) {
+            $custom_link = '<a href="https://eskanogroup.ir" target="_blank">مشاهده افزونه های بیشتر</a>';
+            $links[] = $custom_link;
+        }
+        return $links;
     }
 }
 new OrderList();

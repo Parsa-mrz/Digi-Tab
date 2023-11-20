@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Digi Tab\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 09:13+0000\n"
+"PO-Revision-Date: 2023-11-20 09:15+0000\n"
+"Last-Translator: Parsa mirzaie\n"
+"Language-Team: فارسی\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1\n"
+"X-Domain: woo_order_list"
+
+#: Order-list.php:89
+#, php-format
+msgid ""
+"<strong>افزونه لیست سفارشات اسکانو</strong> نیازمند نصب و فعال سازی   <a "
+"href=\"%s\">ووکامرس</a> میباشد"
+msgstr ""
+
+#. Name of the plugin
+msgid "Digi Tab"
+msgstr "دیجی تب"
+
+#: Order-list.php:95
+msgid "Dismiss this notice"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://eskanogroup.ir"
+msgstr ""
+
+#. Author of the plugin
+msgid "Parsa Mirzaie"
+msgstr ""
+
+#. Description of the plugin
+msgid "This plugin allows you to have own orders list to show"
+msgstr ""
+"پلاگین دیجی تب به کاربران شما حس بهتری برای دیدن سفارش های خودشان میدهد"
+
+#. Widget slug
+#: Order-list.php:102
+msgid "دیجی تب"
+msgstr ""

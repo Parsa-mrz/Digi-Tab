@@ -96,9 +96,9 @@ p.alert {
   font-size: 17px;
   font-weight: bold;
 }
-.active {
+/* .active {
   background-color: black;
-}
+} */
 .item {
   margin: 15px 0;
 }
@@ -171,6 +171,7 @@ a.active_message.active-btn {
   border-radius: 8px;
   top: 58%;
   transition: 1.5s;
+  text-decoration: none;
 }
 a.active_message.active-btn:hover {
   background: #e60909;

@@ -18,23 +18,28 @@ class OrderMenu
 
     public function add_menu_order()
     {
-        add_menu_page(
-            'دیجی تب',
-            'دیجی تب',
-            'manage_options',
-            'order_list',
-            [$this, 'wc_order_list_callback'],
-            'dashicons-cart',
-            '40'
-        );
-        add_submenu_page(
-            'order_list',
-            'فعال سازی افزونه',
-            'فعال سازی افزونه',
-            'manage_options',
-            'active_order_list',
-            [$this, 'wc_active_order_list_callback']
-        );
+        $stored_key = get_option('order_list_key');
+        if ($stored_key === false) {
+            add_menu_page(
+                'دیجی تب',
+                'دیجی تب',
+                'manage_options',
+                'active_order_list',
+                [$this, 'wc_active_order_list_callback'],
+                'dashicons-cart',
+                '40',
+            );
+        } else {
+            add_menu_page(
+                'دیجی تب',
+                'دیجی تب',
+                'manage_options',
+                'order_list',
+                [$this, 'wc_order_list_callback'],
+                'dashicons-cart',
+                '40'
+            );
+        }
     }
 
     public function wc_order_list_callback()
@@ -55,12 +60,16 @@ class OrderMenu
     {
         $this->key_token = $_POST['active'];
         $stored_key = get_option('order_list_key');
-        if ($stored_key === false) {
-            $this->activation($this->key_token, $this->product_token);
-            $this->check_activation($stored_key);
-        } else {
-            $this->check_activation($stored_key);
+        if (isset($this->key_token)) {
+            if ($stored_key === false) {
+                $this->activation($this->key_token, $this->product_token);
+                $this->check_activation($stored_key);
+                wp_redirect(home_url('/wp-admin/admin.php?page=order_list'), 301);
+            } else {
+                $this->check_activation($stored_key);
+            }
         }
+
         require_once(ORD_LI_DIR . DIRECTORY_SEPARATOR . 'src/templates/dashboard/core.view.php');
     }
 
@@ -77,7 +86,7 @@ class OrderMenu
                 'refunded' => 'refunded-tab'
             );
             $color = $_POST['global_color'];
-            update_option( 'digi_tab_color', $color );
+            update_option('digi_tab_color', $color);
 
             foreach ($checkboxes as $checkbox => $option) {
                 $value = isset($_POST[$checkbox]) && $_POST[$checkbox] === 'on' ? 1 : 0;
