@@ -9,7 +9,7 @@ class OrderMenu
 {
     public $message;
     public $key_token;
-    public $product_token = 'd15bfb85-ee15-4ac8-b30a-b4185ae278ac';
+    public $product_token = '5e303fd6-f7c3-492a-a480-e39588815be9';
 
     public function __construct()
     {
