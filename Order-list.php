@@ -1,16 +1,17 @@
 <?php
 /*
 Plugin Name:  Digi Tab
-Plugin URI: https://eskanogroup.ir
+Plugin URI: #
 Description: This plugin allows you to have own orders list to show
 Author: Parsa Mirzaie
 Version: 1.0.0
-Author URI: https://eskanogroup.ir
+Author URI: https://github.com/Parsa-mrz/
 Text Domain: woo_order_list
 License: GPL2
 Developers => 
           Parsa Mirzaie -> PHP Developer : https://github.com/Parsa-mrz/
           Masih Balali =>  Frontend Developer : https://github.com/Masihbalali
+          Alireza Ebrahimi =>  Frontend Developer : https://github.com/alirezaebrahimi5
 
 */
 defined('ABSPATH') || exit;
@@ -114,12 +115,12 @@ class OrderList
 
     function remove_footer_admin()
     {
-        echo '<span id="footer-thankyou" class="font" style="font-size:15px!important">توسعه و طراحی شده توسط <a class="font" href="http://www.eskanogroup.ir" target="_blank" style="text-decoration:none">اسکانو </a></span>';
+        echo '<span id="footer-thankyou" class="font" style="font-size:15px!important">توسعه و طراحی شده توسط <a class="font" href="https://github.com/Parsa-mrz/" target="_blank" style="text-decoration:none">پارسا میرزایی </a></span>';
     }
     public function add_plugin_row_meta($links, $file)
     {
         if (plugin_basename(__FILE__) === $file) {
-            $custom_link = '<a href="https://eskanogroup.ir" target="_blank">مشاهده افزونه های بیشتر</a>';
+            $custom_link = '<a href="https://github.com/Parsa-mrz/" target="_blank">مشاهده افزونه های بیشتر</a>';
             $links[] = $custom_link;
         }
         return $links;
