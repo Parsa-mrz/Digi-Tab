@@ -49,8 +49,5 @@ By using this plugin, customers will have a better experience of your store, lea
   <li>دارای پنل تنظیمات کامل:</li>
 </ul>
 <p style="margin-right:40px;">این ویژگی به شما این امکان را میدهد تمام جنبه های افزونه را به صورت دلخواه و سفارشی تنظیم کنید در این پنل شما میتوانید تنظیمات مربوط به (ظاهر صفحه سفارشات) (وضعیت های سفارش) قابلیت ها و ویژگی های دیگر افزونه را انجام دهید.</p>
-<p style="margin-right:auto;">&nbsp;</p>
-<p style="margin-right:40px;">&nbsp;</p>
-<p style="margin-right:40px;">&nbsp;</p>
 <p style="text-align:justify;"><span style="background-color:hsl(0,75%,60%);color:rgb(241,242,242);">با استفاده از این افزونه، مشتریان تجربه بهتری از فروشگاه شما خواهند داشت و باعث افزایش رضایتمندی و فروش شما خواهد شد.</span></p>
-![digitab3](https://github.com/Parsa-mrz/Digi-Tab/assets/91504922/9436afc8-f9e9-4934-8bf0-56bf41e71b5e)
+<img src="https://github.com/Parsa-mrz/Digi-Tab/assets/91504922/9436afc8-f9e9-4934-8bf0-56bf41e71b5e">
